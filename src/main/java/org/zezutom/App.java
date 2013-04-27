@@ -6,13 +6,14 @@ package org.zezutom;
  */
 public class App 
 {
-    public String sayHello() 
+    public String sayHello(String name) 
     {
-	return "Hello everyone!";
+	return "Hello " + name + "!";
     }
 
     public static void main( String[] args )
     {
-        System.out.println(new App().sayHello());
+	final String name = args[0];
+        System.out.println(new App().sayHello(name));
     }
 }
